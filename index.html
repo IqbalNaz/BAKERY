@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>YUNAZ Cafe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet"
+        href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- jQuery Mobile -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+
+<body>
+
+<!--HOMEPAGE-->
+<div data-role="page" id="home">
+    <div data-role="header">
+
+        <h1>YUNAZ Bakery</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#cart">Cart <span class="cart-count">(0)</span></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div role="main" class="ui-content">
+        <h2>Welcome to YUNAZ Cafe</h2>
+
+        <p>Enjoy delicious drinks, cakes and cookies at YUNAZ Cafe.</p>
+        <h2>Featured Menu</h2>
+
+        <div class="card-grid">
+            <!--COFFEE DRINK-->
+            <div class="card">
+
+                <img src="images/Coffee Drink/interface coffee.jpg" alt="Coffee Drink">
+                <h3>Coffee Drink</h3>
+                <p>Enjoy our delicious coffee drinks.</p>
+
+                <a href="#coffee" class="ui-btn ui-corner-all">View Coffee</a>
+
+            </div>
+
+            <!--NON COFFEE-->
+            <div class="card">
+
+                <img src="images/Non Coffee Drink/interface non coffee.jpg" alt="Non Coffee Drink">
+                <h3>Non Coffee Drink</h3>
+                <p>Refreshing drinks without coffee.</p>
+
+                <a href="#noncoffee" class="ui-btn ui-corner-all">View Drinks</a>
+
+            </div>
+
+            <!--CAKES-->
+            <div class="card">
+
+                <img src="images/Cakes/interface cake.jpg" alt="Cakes">
+                <h3>Cakes</h3>
+                <p>Delicious cakes for every occasion.</p>
+
+                <a href="#cakes" class="ui-btn ui-corner-all">View Cakes</a>
+
+            </div>
+
+            <!--COOKIES-->
+            <div class="card">
+
+                <img src="images/Cookies/interface cookies.jpg" alt="Cookies">
+                <h3>Cookies</h3>
+                <p>Fresh and tasty cookies.</p>
+
+                <a href="#cookies" class="ui-btn ui-corner-all">View Cookies</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div data-role="footer">
+        <h4 class="footer-text">2026 YUNAZ CAFE</h4>
+    </div>
+
+</div>
+
+<!--COFFEE PAGE-->
+<div data-role="page" id="coffee">
+    <div data-role="header">
+
+        <h1>Coffee Drink</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li>
+                    <a href="#cart">
+                        Cart <span class="cart-count">(0)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <h2>Coffee Drink</h2>
+        <div class="card-grid">
+
+            <!--ICED COFFEE LATTE-->
+            <div class="card">
+
+                <img src="images/Coffee Drink/iced coffee latte.jpg" alt="Iced Coffee Latte">
+                <h3>Iced Coffee Latte</h3>
+                <p>Smooth and creamy iced coffee latte.</p>
+
+                <p><b>RM 7.00</b></p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart(
+                        'Iced Coffee Latte',
+                        7.00,
+                        'images/Coffee Drink/iced coffee latte.jpg'
+                    )">
+                    Add
+                </button>
+
+            </div>
+
+            <!--IRISH COFFEE-->
+            <div class="card">
+
+                <img src="images/Coffee Drink/irish coffee.jpg" alt="Irish Coffee">
+                <h3>Irish Coffee</h3>
+                <p>Smooth and rich coffee drink.</p>
+
+                <p><b>RM 8.00</b></p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart(
+                        'Irish Coffee',
+                        8.00,
+                        'images/Coffee Drink/irish coffee.jpg'
+                    )">
+                    Add
+                </button>
+
+            </div>
+
+            <!--ICED AMERICANO-->
+            <div class="card">
+
+                <img src="images/Coffee Drink/iced americano.jpg" alt="Iced Americano">
+                <h3>Iced Americano</h3>
+                <p>Refreshing and strong iced coffee.</p>
+
+                <p><b>RM 6.00</b></p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart(
+                        'Iced Americano',
+                        6.00,
+                        'images/Coffee Drink/iced americano.jpg'
+                    )">
+                    Add
+                </button>
+
+            </div>
+
+        </div>
+
+        <a href="#home" class="ui-btn ui-corner-all">Back to Home</a>
+
+    </div>
+
+    <div data-role="footer">
+        <h4 class="footer-text">2026 YUNAZ CAFE</h4>
+    </div>
+
+</div>
+
+<!--NON-COFFEE PAGE-->
+<div data-role="page" id="noncoffee">
+    <div data-role="header">
+
+        <h1>Non Coffee Drink</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li>
+                    <a href="#cart">
+                        Cart <span class="cart-count">(0)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <h2>Non Coffee Drink</h2>
+        <div class="card-grid">
+
+            <!--ICED MATCHA LATTE-->
+            <div class="card">
+                <img src="images/Non Coffee Drink/iced matcha latte.jpg" alt="Iced Matcha Latte">
+                <h3>Iced Matcha Latte</h3>
+                <p>Creamy and refreshing matcha latte.</p>
+
+                <p><b>RM 8.00</b></p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart(
+                        'Iced Matcha Latte',
+                        8.00,
+                        'images/Non Coffee Drink/iced matcha latte.jpg'
+                    )">
+                    Add
+                </button>
+
+            </div>
+
+            <!--MATCHA STRAWBERRY-->
+            <div class="card">
+
+                <img src="images/Non Coffee Drink/matcha strawberry.jpg" alt="Matcha Strawberry">
+                <h3>Matcha Strawberry</h3>
+                <p>Sweet strawberry combined with matcha.</p>
+
+                <p><b>RM 9.00</b></p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart(
+                        'Matcha Strawberry',
+                        9.00,
+                        'images/Non Coffee Drink/matcha strawberry.jpg'
+                    )">
+                    Add
+                </button>
+
+            </div>
+
+            <!--ICED CHOCOLATE-->
+            <div class="card">
+
+                <img src="images/Non Coffee Drink/iced chocolate drink.jpg" alt="Iced Chocolate">
+                <h3>Iced Chocolate</h3>
+                <p>Rich and creamy chocolate drink.</p>
+
+                <p><b>RM 7.00</b></p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart(
+                        'Iced Chocolate',
+                        7.00,
+                        'images/Non Coffee Drink/iced chocolate drink.jpg'
+                    )">
+                    Add
+                </button>
+
+            </div>
+
+        </div>
+
+        <a href="#home" class="ui-btn ui-corner-all">Back to Home</a>
+
+    </div>
+
+    <div data-role="footer">
+        <h4 class="footer-text">2026 YUNAZ CAFE</h4>
+    </div>
+
+</div>
+
+<!--CAKES PAGES-->
+<div data-role="page" id="cakes">
+    <div data-role="header">
+
+        <h1>Cakes</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li>
+                    <a href="#cart">
+                        Cart <span class="cart-count">(0)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <h2>Cakes</h2>
+        <div class="card-grid">
+
+            <!--TIRAMISU CAKE-->
+            <div class="card">
+                <img src="images/Cakes/tiramisu.jpg" alt="Tiramisu Cake">
+                <h3>Tiramisu Cake</h3>
+                <p>Soft and creamy tiramisu cake.</p>
+
+                <p><b>RM 9.00</b></p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart(
+                        'Tiramisu Cake',
+                        9.00,
+                        'images/Cakes/tiramisu.jpg'
+                    )">
+                    Add
+                </button>
+
+            </div>
+
+            <!--CHOCOLATE CAKE-->
+            <div class="card">
+
+                <img src="images/Cakes/chocolate.jpg" alt="Chocolate Cake">
+                <h3>Chocolate Cake</h3>
+                <p>Rich and delicious chocolate cake.</p>
+
+                <p><b>RM 8.00</b></p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart(
+                        'Chocolate Cake',
+                        8.00,
+                        'images/Cakes/chocolate.jpg'
+                    )">
+                    Add
+                </button>
+
+            </div>
+
+            <!--CHEESE CAKE-->
+            <div class="card">
+
+                <img src="images/Cakes/cheese.jpg" alt="Cheese Cake">
+                <h3>Cheese Cake</h3>
+                <p>Soft and creamy cheese cake.</p>
+
+                <p><b>RM 9.00</b></p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart(
+                        'Cheese Cake',
+                        9.00,
+                        'images/Cakes/cheese.jpg'
+                    )">
+                    Add
+                </button>
+
+            </div>
+
+        </div>
+
+        <a href="#home" class="ui-btn ui-corner-all">Back to Home</a>
+
+    </div>
+
+    <div data-role="footer">
+        <h4 class="footer-text">2026 YUNAZ CAFE</h4>
+    </div>
+
+</div>
+
+<!--COOKIES PAGE-->
+<div data-role="page" id="cookies">
+    <div data-role="header">
+
+        <h1>Cookies</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li>
+                    <a href="#cart">
+                        Cart <span class="cart-count">(0)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <h2>Cookies</h2>
+        <div class="card-grid">
+
+            <!--BISCOFF COOKIES-->
+            <div class="card">
+                <img src="images/Cookies/biscoff.jpg" alt="Biscoff Cookies">
+                <h3>Biscoff Cookies</h3>
+                <p>Crunchy and delicious Biscoff cookies.</p>
+
+                <p><b>RM 5.00</b></p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart(
+                        'Biscoff Cookies',
+                        5.00,
+                        'images/Cookies/biscoff.jpg'
+                    )">
+                    Add
+                </button>
+
+            </div>
+
+            <!--CHOCO CHIPS COOKIES-->
+            <div class="card">
+
+                <img src="images/Cookies/choco chips.jpg" alt="Choco Chips Cookies">
+                <h3>Choco Chips Cookies</h3>
+                <p>Crispy cookies with chocolate chips.</p>
+
+                <p><b>RM 5.00</b></p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart(
+                        'Choco Chips Cookies',
+                        5.00,
+                        'images/Cookies/choco chips.jpg'
+                    )">
+                    Add
+                </button>
+
+            </div>
+
+            <!--RED VELVET COOKIES-->
+            <div class="card">
+
+                <img src="images/Cookies/red velvet.jpg" alt="Red Velvet Cookies">
+                <h3>Red Velvet Cookies</h3>
+                <p>Soft and tasty red velvet cookies.</p>
+
+                <p><b>RM 6.00</b></p>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart(
+                        'Red Velvet Cookies',
+                        6.00,
+                        'images/Cookies/red velvet.jpg'
+                    )">
+                    Add
+                </button>
+
+            </div>
+
+        </div>
+
+        <a href="#home" class="ui-btn ui-corner-all">Back to Home</a>
+
+    </div>
+
+    <div data-role="footer">
+        <h4 class="footer-text">2026 YUNAZ CAFE</h4>
+    </div>
+
+</div>
+
+<!--PRODUCT PAGE-->
+<div data-role="page" id="products">
+    <div data-role="header">
+
+        <h1>Products</h1>
+        <div data-role="navbar">
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#products" class="ui-btn-active">Products</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#cart">Cart <span class="cart-count">(0)</span></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <h2>Our Products</h2>
+        <ul data-role="listview" data-inset="true">
+
+            <li>
+                <h3>Iced Coffee Latte</h3>
+                <p>RM 7.00</p>
+
+                <button class="add-btn"
+                    onclick="addToCart(
+                        'Iced Coffee Latte',
+                        7.00,
+                        'images/Coffee Drink/iced coffee latte.jpg'
+                    )">
+                    Add
+                </button>
+            </li>
+
+            <li>
+                <h3>Irish Coffee</h3>
+                <p>RM 8.00</p>
+
+                <button class="add-btn"
+                    onclick="addToCart(
+                        'Irish Coffee',
+                        8.00,
+                        'images/Coffee Drink/irish coffee.jpg'
+                    )">
+                    Add
+                </button>
+            </li>
+
+            <li>
+                <h3>Iced Americano</h3>
+                <p>RM 6.00</p>
+
+                <button class="add-btn"
+                    onclick="addToCart(
+                        'Iced Americano',
+                        6.00,
+                        'images/Coffee Drink/iced americano.jpg'
+                    )">
+                    Add
+                </button>
+            </li>
+
+            <li>
+                <h3>Iced Matcha Latte</h3>
+                <p>RM 8.00</p>
+
+                <button class="add-btn"
+                    onclick="addToCart(
+                        'Iced Matcha Latte',
+                        8.00,
+                        'images/Non Coffee Drink/iced matcha latte.jpg'
+                    )">
+                    Add
+                </button>
+            </li>
+
+            <li>
+                <h3>Matcha Strawberry</h3>
+                <p>RM 9.00</p>
+
+                <button class="add-btn"
+                    onclick="addToCart(
+                        'Matcha Strawberry',
+                        9.00,
+                        'images/Non Coffee Drink/matcha strawberry.jpg'
+                    )">
+                    Add
+                </button>
+            </li>
+
+            <li>
+                <h3>Iced Chocolate</h3>
+                <p>RM 7.00</p>
+
+                <button class="add-btn"
+                    onclick="addToCart(
+                        'Iced Chocolate',
+                        7.00,
+                        'images/Non Coffee Drink/iced chocolate drink.jpg'
+                    )">
+                    Add
+                </button>
+            </li>
+
+            <li>
+                <h3>Tiramisu Cake</h3>
+                <p>RM 9.00</p>
+
+                <button class="add-btn"
+                    onclick="addToCart(
+                        'Tiramisu Cake',
+                        9.00,
+                        'images/Cakes/tiramisu.jpg'
+                    )">
+                    Add
+                </button>
+            </li>
+
+            <li>
+                <h3>Chocolate Cake</h3>
+                <p>RM 8.00</p>
+
+                <button class="add-btn"
+                    onclick="addToCart(
+                        'Chocolate Cake',
+                        8.00,
+                        'images/Cakes/chocolate.jpg'
+                    )">
+                    Add
+                </button>
+            </li>
+
+            <li>
+                <h3>Cheese Cake</h3>
+                <p>RM 9.00</p>
+
+                <button class="add-btn"
+                    onclick="addToCart(
+                        'Cheese Cake',
+                        9.00,
+                        'images/Cakes/cheese.jpg'
+                    )">
+                    Add
+                </button>
+            </li>
+
+            <li>
+                <h3>Biscoff Cookies</h3>
+                <p>RM 5.00</p>
+
+                <button class="add-btn"
+                    onclick="addToCart(
+                        'Biscoff Cookies',
+                        5.00,
+                        'images/Cookies/biscoff.jpg'
+                    )">
+                    Add
+                </button>
+            </li>
+
+            <li>
+                <h3>Choco Chips Cookies</h3>
+                <p>RM 5.00</p>
+
+                <button class="add-btn"
+                    onclick="addToCart(
+                        'Choco Chips Cookies',
+                        5.00,
+                        'images/Cookies/choco chips.jpg'
+                    )">
+                    Add
+                </button>
+            </li>
+
+            <li>
+                <h3>Red Velvet Cookies</h3>
+                <p>RM 6.00</p>
+
+                <button class="add-btn"
+                    onclick="addToCart(
+                        'Red Velvet Cookies',
+                        6.00,
+                        'images/Cookies/red velvet.jpg'
+                    )">
+                    Add
+                </button>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div data-role="footer">
+        <h4 class="footer-text">2026 YUNAZ CAFE</h4>
+    </div>
+
+</div>
+
+<!--CONTACT PAGE-->
+<div data-role="page" id="contact">
+    <div data-role="header">
+
+        <h1>Contact Us</h1>
+        <div data-role="navbar">
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#products">Products</a>
+                </li>
+                <li>
+                    <a href="#contact" class="ui-btn-active">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#cart">Cart <span class="cart-count">(0)</span></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <h2>Contact Us</h2>
+        <p>Have any questions or feedback? Feel free to contact us.</p>
+
+        <p>
+            <b>Email:</b>
+            yunazcafe@gmail.com
+        </p>
+
+        <p>
+            <b>Phone:</b>
+            012-3456789
+        </p>
+
+        <p>
+            <b>Address:</b>
+            Politeknik Kuching, Sarawak
+        </p>
+
+        <h2>Send Us a Message</h2>
+
+        <form id="contactForm">
+
+            <label for="fullName">Full Name:</label>
+
+            <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Enter your full name"
+                required>
+
+            <label for="email">Email:</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required>
+
+            <label for="phone">Phone Number:</label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                required>
+
+            <label for="subject">Subject:</label>
+
+            <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Enter subject"
+                required>
+
+            <label for="message">Message:</label>
+
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Enter your message"
+                rows="6"
+                required>
+            </textarea>
+
+            <button
+                type="submit"
+                class="ui-btn ui-btn-b ui-corner-all">
+                Submit
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div data-role="footer">
+        <h4 class="footer-text">2026 YUNAZ CAFE</h4>
+    </div>
+
+    <!--SUCCESS POPUP-->
+    <div data-role="popup"
+        id="successPopup"
+        data-overlay-theme="b"
+        data-theme="a"
+        data-dismissible="false"
+        class="ui-corner-all"
+        style="padding:20px; text-align:center;">
+
+        <h3>Notification</h3>
+
+        <p>Message sent successfully!</p>
+
+        <a href="#" class="ui-btn ui-btn-b ui-corner-all ok-btn" data-rel="back">OK</a>
+
+    </div>
+
+</div>
+
+<!--CART PAGE-->
+<div data-role="page" id="cart">
+    <div data-role="header">
+
+        <h1>Cart</h1>
+        <div data-role="navbar">
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#products">Products</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#cart" class="ui-btn-active">Cart
+                        <span class="cart-count">(0)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+
+        <div id="cartTotal" class="cart-total">Total: RM 0.00</div>
+
+        <!--PAY BUTTON-->
+        <button
+            onclick="payCart()"
+            class="ui-btn ui-btn-b ui-corner-all">
+            Pay
+        </button>
+
+        <!--CLEAR CART BUTTON-->
+        <button
+            onclick="clearCart()"
+            class="ui-btn ui-btn-b ui-corner-all">
+            Clear Cart
+        </button>
+
+    </div>
+
+    <div data-role="footer">
+        <h4 class="footer-text">2026 YUNAZ CAFE</h4>
+    </div>
+
+</div>
+
+
+
+
+<!--JAVASCRIPT-->
+<script>
+
+<!--ADD TO CART-->
+
+function addToCart(name, price, image) {
+
+    let cart = JSON.parse(
+        localStorage.getItem("yunazCart")
+    ) || [];
+
+    let existingItem = cart.find(
+        item => item.name === name
+    );
+
+    if (existingItem) {
+
+        existingItem.quantity++;
+
+        existingItem.image = image;
+
+    } else {
+
+        cart.push({
+
+            name: name,
+            price: price,
+            image: image,
+            quantity: 1
+
+        });
+
+    }
+
+    localStorage.setItem(
+        "yunazCart",
+        JSON.stringify(cart)
+    );
+
+    updateCartCount();
+
+    alert(
+        name + " has been added to your cart!"
+    );
+
+}
+
+
+<!--DISPLAY CART-->
+
+function displayCart() {
+
+    let cart = JSON.parse(
+        localStorage.getItem("yunazCart")
+    ) || [];
+
+    let cartItems =
+        document.getElementById("cartItems");
+
+    let cartTotal =
+        document.getElementById("cartTotal");
+
+    if (cart.length === 0) {
+
+        cartItems.innerHTML =
+            '<div class="empty-cart">' +
+            'Your cart is currently empty.' +
+            '</div>';
+
+        cartTotal.innerHTML =
+            "Total: RM 0.00";
+
+        updateCartCount();
+
+        return;
+    }
+
+    let total = 0;
+
+    let html = "";
+
+    cart.forEach(function(item, index) {
+
+        let itemTotal =
+            item.price * item.quantity;
+
+        total += itemTotal;
+
+        html += `
+
+            <div class="cart-item">
+
+                <div class="cart-item-content">
+
+                    <img
+                        src="${item.image}"
+                        alt="${item.name}"
+                        class="cart-item-img"
+                        onerror="this.style.display='none';">
+
+                    <div class="cart-item-details">
+
+                        <h3>
+                            ${item.name}
+                        </h3>
+
+                        <div class="cart-price">
+                            RM ${item.price.toFixed(2)}
+                        </div>
+
+                        <div>
+
+                            <button
+                                class="quantity-btn"
+                                onclick="decreaseQuantity(${index})">
+                                −
+                            </button>
+
+                            <b>
+                                ${item.quantity}
+                            </b>
+
+                            <button
+                                class="quantity-btn"
+                                onclick="increaseQuantity(${index})">
+                                +
+                            </button>
+
+                        </div>
+
+                        <p>
+                            Subtotal:
+                            <b>
+                                RM ${itemTotal.toFixed(2)}
+                            </b>
+                        </p>
+
+                        <button
+                            class="remove-btn"
+                            onclick="removeItem(${index})">
+                            Remove
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+    cartItems.innerHTML = html;
+
+    cartTotal.innerHTML =
+        "Total: RM " + total.toFixed(2);
+
+    updateCartCount();
+
+}
+
+
+<!--INCREASE QUANTITY-->
+
+function increaseQuantity(index) {
+
+    let cart = JSON.parse(
+        localStorage.getItem("yunazCart")
+    ) || [];
+
+    cart[index].quantity++;
+
+    localStorage.setItem(
+        "yunazCart",
+        JSON.stringify(cart)
+    );
+
+    displayCart();
+
+}
+
+
+<!--DECREASE QUANTITY-->
+
+function decreaseQuantity(index) {
+
+    let cart = JSON.parse(
+        localStorage.getItem("yunazCart")
+    ) || [];
+
+    if (cart[index].quantity > 1) {
+
+        cart[index].quantity--;
+
+    } else {
+
+        cart.splice(index, 1);
+
+    }
+
+    localStorage.setItem(
+        "yunazCart",
+        JSON.stringify(cart)
+    );
+
+    displayCart();
+
+}
+
+
+<!--REMOVE ITEM-->
+
+function removeItem(index) {
+
+    let cart = JSON.parse(
+        localStorage.getItem("yunazCart")
+    ) || [];
+
+    cart.splice(index, 1);
+
+    localStorage.setItem(
+        "yunazCart",
+        JSON.stringify(cart)
+    );
+
+    displayCart();
+
+}
+
+
+<!--CLEAR CART-->
+
+function clearCart() {
+
+    localStorage.removeItem(
+        "yunazCart"
+    );
+
+    displayCart();
+
+}
+
+
+<!--PAY-->
+
+function payCart() {
+
+    let cart = JSON.parse(
+        localStorage.getItem("yunazCart")
+    ) || [];
+
+    if (cart.length === 0) {
+
+        alert("Your cart is empty!");
+
+        return;
+
+    }
+
+    alert("Payment successful!");
+
+}
+
+
+<!--CART COUNT-->
+
+function updateCartCount() {
+
+    let cart = JSON.parse(
+        localStorage.getItem("yunazCart")
+    ) || [];
+
+    let count = 0;
+
+    cart.forEach(function(item) {
+
+        count += item.quantity;
+
+    });
+
+    $(".cart-count").text(
+        "(" + count + ")"
+    );
+
+}
+
+
+<!--OPEN CART-->
+
+$(document).on(
+    "pagebeforeshow",
+    "#cart",
+    function() {
+
+        displayCart();
+
+    }
+);
+
+
+<!--CONTACT FORM-->
+
+$(document).on(
+    "submit",
+    "#contactForm",
+    function(event) {
+
+        event.preventDefault();
+
+        $("#successPopup").popup("open");
+
+        this.reset();
+
+    }
+);
+
+
+<!--PAGE READY-->
+
+$(document).ready(
+    function() {
+
+        updateCartCount();
+
+    }
+);
+
+</script>
+
+
+
+<!--STYLE/CSS-->
+<style>
+
+<!--GENERAL CARD-->
+
+.product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+    gap: 20px;
+    padding: 10px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 10px;
+}
+
+.card p {
+    color: #555;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.footer-text {
+    text-align: center;
+}
+
+
+<!--ADD BUTTON-->
+
+.add-btn {
+    background-color: #007bff !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 5px !important;
+    padding: 6px 15px !important;
+    font-size: 14px !important;
+    display: inline-block !important;
+    margin-top: 5px;
+}
+
+
+<!--CART-->
+
+.cart-item {
+    background: white;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.cart-item-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cart-item-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item h3 {
+    margin: 0 0 5px 0;
+}
+
+.cart-price {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.quantity-btn {
+    background-color: #007bff !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 5px !important;
+    padding: 4px 10px !important;
+    margin: 2px;
+}
+
+.remove-btn {
+    background-color: #dc3545 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 5px !important;
+    padding: 5px 10px !important;
+    margin-top: 5px;
+}
+
+.cart-total {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+}
+
+.cart-count {
+    font-weight: bold;
+}
+
+
+<!--SUCCESS POPUP-->
+
+#successPopup {
+    min-width: 250px;
+    text-align: center;
+}
+
+#successPopup h3 {
+    margin-top: 0;
+}
+
+
+<!--SMALL BUTTON OK-->
+
+#successPopup .ok-btn {
+    display: inline-block !important;
+    width: 70px !important;
+    min-width: 0 !important;
+    margin: 10px auto 0 auto !important;
+    padding: 6px 0 !important;
+    font-size: 14px !important;
+}
+
+</style>
+
+
+</body>
+</html>

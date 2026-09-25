@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Cart - YUNAZ CAFE</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f5f1;
+            color: #333;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            background-color: #3e2723;
+            padding: 15px 40px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #d7a86e;
+        }
+
+
+        /* CART */
+
+        .cart-container {
+
+            width: 85%;
+            max-width: 900px;
+
+            margin: 50px auto;
+
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+
+        }
+
+        .cart-container h1 {
+
+            text-align: center;
+
+            color: #3e2723;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        /* CART ITEM */
+
+        .cart-item {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid #ddd;
+
+        }
+
+        .item-info h3 {
+
+            color: #3e2723;
+
+            margin-bottom: 5px;
+
+        }
+
+        .item-info p {
+
+            color: #777;
+
+        }
+
+
+        /* QUANTITY */
+
+        .quantity {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+        }
+
+        .quantity button {
+
+            border: none;
+
+            background-color: #1976d2;
+
+            color: white;
+
+            width: 30px;
+
+            height: 30px;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+        }
+
+        .quantity button:hover {
+
+            background-color: #0d47a1;
+
+        }
+
+
+        /* REMOVE */
+
+        .remove-btn {
+
+            background-color: #d32f2f;
+
+            color: white;
+
+            border: none;
+
+            padding: 7px 12px;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+        }
+
+        .remove-btn:hover {
+
+            background-color: #b71c1c;
+
+        }
+
+
+        /* TOTAL */
+
+        .cart-total {
+
+            text-align: right;
+
+            margin-top: 25px;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            color: #3e2723;
+
+        }
+
+
+        /* BUTTON */
+
+        .checkout-btn {
+
+            display: block;
+
+            margin: 25px 0 0 auto;
+
+            background-color: #388e3c;
+
+            color: white;
+
+            border: none;
+
+            padding: 12px 25px;
+
+            border-radius: 6px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+
+        }
+
+        .checkout-btn:hover {
+
+            background-color: #1b5e20;
+
+        }
+
+
+        .clear-btn {
+
+            background-color: #777;
+
+            color: white;
+
+            border: none;
+
+            padding: 10px 18px;
+
+            border-radius: 6px;
+
+            cursor: pointer;
+
+            margin-top: 10px;
+
+        }
+
+
+        /* EMPTY */
+
+        .empty {
+
+            text-align: center;
+
+            padding: 30px;
+
+            color: #777;
+
+        }
+
+
+        /* FOOTER */
+
+        footer {
+
+            background-color: #3e2723;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+
+            margin-top: 50px;
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 10px;
+
+            }
+
+            nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 12px;
+
+            }
+
+            .cart-item {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 15px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="logo">
+            ☕ YUNAZ CAFE
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#about">
+                    About Us
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#coffee">
+                    Coffee
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#dessert">
+                    Dessert
+                </a>
+            </li>
+
+            <li>
+                <a href="cart.html">
+                    Cart 🛒
+                </a>
+            </li>
+
+            <li>
+                <a href="login.html">
+                    Login
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- CART -->
+
+    <div class="cart-container">
+
+        <h1>Shopping Cart 🛒</h1>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+
+            Total:
+            RM <span id="total">0.00</span>
+
+        </div>
+
+        <button class="checkout-btn"
+                onclick="checkout()">
+
+            Checkout
+
+        </button>
+
+        <button class="clear-btn"
+                onclick="clearCart()">
+
+            Clear Cart
+
+        </button>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 YUNAZ CAFE. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function displayCart() {
+
+            let cart =
+                JSON.parse(localStorage.getItem("cart")) || [];
+
+            let cartItems =
+                document.getElementById("cartItems");
+
+            let total =
+                document.getElementById("total");
+
+            cartItems.innerHTML = "";
+
+            let totalPrice = 0;
+
+
+            if (cart.length === 0) {
+
+                cartItems.innerHTML = `
+                    <div class="empty">
+                        <h3>Your cart is empty.</h3>
+                        <p>Please add some items from our menu.</p>
+                    </div>
+                `;
+
+                total.innerText = "0.00";
+
+                return;
+            }
+
+
+            cart.forEach((item, index) => {
+
+                let itemTotal =
+                    item.price * item.quantity;
+
+                totalPrice += itemTotal;
+
+
+                cartItems.innerHTML += `
+
+                    <div class="cart-item">
+
+                        <div class="item-info">
+
+                            <h3>
+                                ${item.name}
+                            </h3>
+
+                            <p>
+                                RM ${item.price.toFixed(2)}
+                            </p>
+
+                        </div>
+
+
+                        <div class="quantity">
+
+                            <button
+                                onclick="decreaseQuantity(${index})">
+                                -
+                            </button>
+
+                            <span>
+                                ${item.quantity}
+                            </span>
+
+                            <button
+                                onclick="increaseQuantity(${index})">
+                                +
+                            </button>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                RM ${itemTotal.toFixed(2)}
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            class="remove-btn"
+                            onclick="removeItem(${index})">
+
+                            Remove
+
+                        </button>
+
+                    </div>
+
+                `;
+
+            });
+
+
+            total.innerText =
+                totalPrice.toFixed(2);
+
+        }
+
+
+        /* ADD QUANTITY */
+
+        function increaseQuantity(index) {
+
+            let cart =
+                JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart[index].quantity += 1;
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+            displayCart();
+
+        }
+
+
+        /* REDUCE QUANTITY */
+
+        function decreaseQuantity(index) {
+
+            let cart =
+                JSON.parse(localStorage.getItem("cart")) || [];
+
+            if (cart[index].quantity > 1) {
+
+                cart[index].quantity -= 1;
+
+            } else {
+
+                cart.splice(index, 1);
+
+            }
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+            displayCart();
+
+        }
+
+
+        /* REMOVE ITEM */
+
+        function removeItem(index) {
+
+            let cart =
+                JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.splice(index, 1);
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+            displayCart();
+
+        }
+
+
+        /* CLEAR CART */
+
+        function clearCart() {
+
+            localStorage.removeItem("cart");
+
+            displayCart();
+
+        }
+
+
+        /* CHECKOUT */
+
+        function checkout() {
+
+            let cart =
+                JSON.parse(localStorage.getItem("cart")) || [];
+
+            if (cart.length === 0) {
+
+                alert("Your cart is empty!");
+
+                return;
+
+            }
+
+            alert(
+                "Thank you for ordering from YUNAZ CAFE!"
+            );
+
+            localStorage.removeItem("cart");
+
+            displayCart();
+
+        }
+
+
+        /* LOAD CART */
+
+        displayCart();
+
+    </script>
+
+</body>
+
+</html>
